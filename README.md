@@ -1,6 +1,10 @@
 # gm_win32color
 
-Minimal Reproducible Example of 24 bit color support in Garry's Mod SRCDS (main branch, Windows 10, conhost, virtual terminal enabled, using ansi colour codes) 
+Minimal Reproducible Example of 24 bit color support in Garry's Mod SRCDS (main branch, Windows 10, conhost, virtual terminal enabled, using ansi colour codes)
+
+> [!WARNING]
+> This is a minimum environment, and all functions are not stable, may break, and may crash games.
+> Do not use this in a production environment.
 
 ## API Reference
 

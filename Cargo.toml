@@ -1,0 +1,13 @@
+[package]
+name = "gm_win32color"
+version = "0.0.1"
+edition = "2021"
+
+[lib]
+name = "gmsv_win32color_win32"
+crate-type = ["cdylib"]
+
+[dependencies]
+gmod = {version = "17.0.0", default-features = false}
+ansi_term = "0.12.1"
+termsize = "0.1.6"

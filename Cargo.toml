@@ -11,3 +11,4 @@ crate-type = ["cdylib"]
 gmod = {version = "17.0.0", default-features = false}
 ansi_term = "0.12.1"
 termsize = "0.1.6"
+bracket-color = "0.8.7"

@@ -4,6 +4,7 @@ use gmod::lua::{State};
 use gmod::lua_function;
 use ansi_term::{Colour, Style};
 use std::io::{stdout, Write};
+use bracket_color::prelude::*;
 
 #[macro_use] extern crate gmod;
 
@@ -34,6 +35,14 @@ unsafe fn test(lua: State){
 
     for col in 0..cols {
         print!("{}", Style::default().fg(Colour::RGB(0, 0, ((col * 255) / cols).try_into().unwrap())).paint("|"));
+    }
+
+    for col in HsvLerp::new(RGB::from_u8(255, 0, 0).into(), RGB::from_u8(0, 255, 255).into(), cols - 1) {
+        let rCol = col.to_rgb();
+        let r = (rCol.r * 255.0).round() as u8;
+        let g = (rCol.g * 255.0).round() as u8;
+        let b = (rCol.b * 255.0).round() as u8;
+        print!("{}", Style::default().fg(Colour::RGB(r, g, b)).paint("|"));
     }
     println!();
 }

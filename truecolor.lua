@@ -24,5 +24,11 @@ for i = 1, w do
 end
 print()
 
+local from, to = ColorToHSV(Color(255, 0, 0)), ColorToHSV(Color(0, 255, 255))
+for i = 1, w do
+    MsgC(HSVToColor(Lerp(i / w, from, to), 1, 1), "|")
+end
+print()
+
 print("ANSI Output")
 win32color.test()
